@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 //CUSTOM COMPONENTS
 import SwipeableTab from "../../SwipeableTab";
 import { DatePickerEarth, DatePickerSol } from "./DatePickers";
@@ -76,6 +79,19 @@ const SwipeableTabNasaCalendar = ({
 			))}
 		</SwipeableTab>
 	);
+};
+
+SwipeableTabNasaCalendar.propTypes = {
+	keyValue: PropTypes.string,
+	differentiator: PropTypes.string,
+	dir: PropTypes.string,
+	dataTab: PropTypes.arrayOf[PropTypes.object],
+	dataPicker: PropTypes.arrayOf[PropTypes.object],
+	datePickerValue: PropTypes.string,
+	maxDates: PropTypes.object,
+	selectedItem: PropTypes.string,
+	setSelectedItem: PropTypes.func,
+	handleOnChange: PropTypes.func,
 };
 
 export { SwipeableTabNasaCalendar };

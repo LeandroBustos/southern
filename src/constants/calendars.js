@@ -9,4 +9,5 @@ export const CALENDAR_CONSTANTS = {
 	YEAR_VIEW: "year",
 	DAY_VIEW: "day",
 	INVALID_DATE: "INVALID DATE",
+	TEXT_HELPER_DATE: "Please enter a year between 1 and",
 };

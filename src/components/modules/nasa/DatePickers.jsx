@@ -95,7 +95,7 @@ const DatePickerSol = ({ keyValue, id, name, value, maxDate, onChange }) => {
 			>
 				{error
 					? CALENDAR_CONSTANTS.INVALID_DATE
-					: `Please enter a year between 1 and ${maxDate}`}
+					: `${CALENDAR_CONSTANTS.TEXT_HELPER_DATE} ${maxDate}`}
 			</FormHelperText>
 		</FormControl>
 	);
