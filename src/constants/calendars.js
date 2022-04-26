@@ -1,5 +1,6 @@
 export const CALENDAR_CONSTANTS = {
 	CALENDAR_NAME: "calendar",
+	DATE_NAME: "DATE",
 	SOL_CALENDAR_NAME: "sol",
 	EARTH_CALENDAR_NAME: "earth",
 	YEAR_FORMAT: "YYYY",

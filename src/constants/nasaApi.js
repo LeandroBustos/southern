@@ -1,6 +1,6 @@
 export const NASA_API = {
 	API_ROVERS_URL: "https://api.nasa.gov/mars-photos/api/v1/rovers",
-	API_KEY: "DEMO_KEY",
+	API_KEY: "qhzI2pKpqZNdIVlZWOmjqqYAcpjh8m7xlEaNC7Ep",
 	PARAM_API_KEY_NAME: "api_key",
 	PARAM_PAGE_NAME: "page",
 	PARAM_EARTH_CALENDAR_NAME: "earth_date",

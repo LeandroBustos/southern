@@ -62,7 +62,7 @@ const DatePickerSol = ({ keyValue, id, name, value, maxDate, onChange }) => {
 
 	return (
 		<FormControl key={keyValue + "-form-control"} sx={{ width: "30ch" }} variant="outlined">
-			<InputLabel key={keyValue + "-input-label"} error={error}>
+			<InputLabel rol="inputlabel" key={keyValue + "-input-label"} error={error} label={name}>
 				{name}
 			</InputLabel>
 			<OutlinedInput
@@ -105,7 +105,7 @@ DatePickerSol.propTypes = {
 	keyValue: PropTypes.string,
 	id: PropTypes.string,
 	name: PropTypes.string,
-	value: PropTypes.string,
+	value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	maxDate: PropTypes.number,
 	onChange: PropTypes.func,
 };
@@ -114,7 +114,7 @@ DatePickerEarth.propTypes = {
 	keyValue: PropTypes.string,
 	id: PropTypes.string,
 	name: PropTypes.string,
-	value: PropTypes.string,
+	value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	onChange: PropTypes.func,
 };
 

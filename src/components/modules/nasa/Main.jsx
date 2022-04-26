@@ -3,7 +3,7 @@ import React from "react";
 //MATERIAL COMPONENTS
 import Box from "@mui/material/Box";
 //CUSTOM COMPONENTS
-import { SwipeableTabNasaCalendar } from "./Swipeables";
+import { SwipeableNasaCalendar } from "./SwipeableCalendar";
 import CustomImageList from "../../CustomImageList";
 import SwipeableTab from "../../SwipeableTab";
 import CircularLoader from "../../CircularLoader";
@@ -133,7 +133,7 @@ const NasaModule = () => {
 						{rovers &&
 							rovers.map((rover, index) => (
 								<>
-									<SwipeableTabNasaCalendar
+									<SwipeableNasaCalendar
 										key={`sol-earth-${index}`}
 										keyValue={`sol-earth-${index}`}
 										differentiator={rover.name.toLowerCase()}
@@ -185,17 +185,17 @@ const NasaModule = () => {
 						myRef={lastElementRef}
 						hasMore={hasMore}
 					/>
+					{shouldFetch[roverName] ? (
+						<LinearProgress style={{ top: -5, paddingTop: "5px" }} color="secondary" />
+					) : (
+						""
+					)}
 				</Box>
 			) : (
 				<CircularLoader
 					key={`${roverName}-circular-loader-main`}
 					keyValue={`${roverName}-circular-loader-main`}
 				/>
-			)}
-			{shouldFetch[roverName] ? (
-				<LinearProgress style={{ top: -5, paddingTop: "5px" }} color="secondary" />
-			) : (
-				""
 			)}
 		</div>
 	);

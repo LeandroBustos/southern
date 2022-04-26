@@ -70,19 +70,19 @@ const TabPanelFormControl = ({
 TabPanel.propTypes = {
 	keyValue: PropTypes.string,
 	children: PropTypes.node,
-	value: PropTypes.string,
+	value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	index: PropTypes.number,
 	other: PropTypes.object,
 };
 
 TabPanelFormControl.propTypes = {
 	keyValue: PropTypes.string,
-	differential: PropTypes.string,
+	differential: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	componentIndicator: PropTypes.string,
 	data: PropTypes.arrayOf(PropTypes.object),
 	label: PropTypes.string,
 	valueForm: PropTypes.string,
-	valueTabPanel: PropTypes.string,
+	valueTabPanel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	index: PropTypes.number,
 	dir: PropTypes.string,
 	handleOnChange: PropTypes.func,

@@ -34,10 +34,10 @@ const TabPanelFormCamera = ({
 
 TabPanelFormCamera.propTypes = {
 	keyValue: PropTypes.string,
-	differential: PropTypes.string,
+	differential: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	data: PropTypes.arrayOf(PropTypes.object),
 	label: PropTypes.string,
-	valueTabPanel: PropTypes.string,
+	valueTabPanel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	valueForm: PropTypes.string,
 	index: PropTypes.number,
 	dir: PropTypes.string,

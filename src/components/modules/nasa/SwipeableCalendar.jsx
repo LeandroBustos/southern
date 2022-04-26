@@ -11,7 +11,7 @@ import { createKey } from "../../../utils/key";
 //CONSTANTS
 import { CALENDAR_CONSTANTS } from "../../../constants/calendars";
 
-const SwipeableTabNasaCalendar = ({
+const SwipeableNasaCalendar = ({
 	keyValue,
 	differentiator,
 	dir,
@@ -52,7 +52,7 @@ const SwipeableTabNasaCalendar = ({
 								`date-picker-calendar-${item}-${index}`,
 							)}
 							id={createKey(index, item, differentiator)}
-							name={`${item.toUpperCase()} DATE`}
+							name={`${item.toUpperCase()} ${CALENDAR_CONSTANTS.DATE_NAME}`}
 							value={datePickerValue[item]}
 							maxDate={maxDates[item]}
 							onChange={(newValue) => handleOnChange(newValue, item)}
@@ -70,7 +70,7 @@ const SwipeableTabNasaCalendar = ({
 								`date-picker-calendar-${item}`,
 							)}
 							id={createKey(index, item, differentiator)}
-							name={`${item.toUpperCase()} DATE`}
+							name={`${item.toUpperCase()} ${CALENDAR_CONSTANTS.DATE_NAME}`}
 							value={datePickerValue[item]}
 							onChange={(newValue) => handleOnChange(newValue, item)}
 						/>
@@ -81,17 +81,17 @@ const SwipeableTabNasaCalendar = ({
 	);
 };
 
-SwipeableTabNasaCalendar.propTypes = {
+SwipeableNasaCalendar.propTypes = {
 	keyValue: PropTypes.string,
 	differentiator: PropTypes.string,
 	dir: PropTypes.string,
-	dataTab: PropTypes.arrayOf[PropTypes.object],
-	dataPicker: PropTypes.arrayOf[PropTypes.object],
-	datePickerValue: PropTypes.string,
+	dataTab: PropTypes.arrayOf(PropTypes.object),
+	dataPicker: PropTypes.arrayOf(PropTypes.string),
+	datePickerValue: PropTypes.object,
 	maxDates: PropTypes.object,
-	selectedItem: PropTypes.string,
+	selectedItem: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	setSelectedItem: PropTypes.func,
 	handleOnChange: PropTypes.func,
 };
 
-export { SwipeableTabNasaCalendar };
+export { SwipeableNasaCalendar };
